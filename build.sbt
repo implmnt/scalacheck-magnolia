@@ -11,6 +11,7 @@ homepage := Some(url("http://github.com/implmnt/scalacheck-magnolia"))
 scalafmtOnCompile := true
 testFrameworks += new TestFramework("minitest.runner.Framework")
 
+useGpg := true
 publishTo := sonatypePublishTo.value
 publishMavenStyle := true
 sonatypeProjectHosting := Some(GitHubHosting("implmnt", "scalacheck-magnolia", "georgy.davityan@gmail.com"))
