@@ -21,7 +21,7 @@ object DerivationSuite extends SimpleTestSuite {
       s <- arbitrary[String]
       i <- arbitrary[Int]
       b <- arbitrary[Boolean]
-    } yield Leaf(s, i, b)
+    } yield Leaf(s.take(10), i, b)
 
   def arbitraryNode: Gen[Node] =
     for {
