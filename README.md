@@ -8,7 +8,7 @@ Derivation of [scalacheck](https://github.com/rickynils/scalacheck) Arbitrary on
 
 Add to your `build.sbt`
 ```scala
-libraryDependencies += "im.plmnt" %% "scalacheck-magnolia" % "0.1.0"
+libraryDependencies += "im.plmnt" %% "scalacheck-magnolia" % "0.2.0"
 ```
 
 Can be used for case classes and/or sealed traits
