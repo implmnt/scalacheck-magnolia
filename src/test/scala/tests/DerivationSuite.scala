@@ -25,9 +25,9 @@ object DerivationSuite extends SimpleTestSuite {
 
   def arbitraryNode: Gen[Node] =
     for {
-      p1 <- Gen.lzy(arbitraryTree)
-      l  <- arbitrary[Long]
-    } yield Node(p1, l)
+      tree <- Gen.lzy(arbitraryTree)
+      l    <- arbitrary[Long]
+    } yield Node(tree, l)
 
   def arbitraryConstLeaf: Gen[ConstLeaf.type] =
     Gen.const(ConstLeaf)
