@@ -1,7 +1,7 @@
 package tests
 
-import im.plmnt.scalacheck.magnolia.auto._
-import im.plmnt.scalacheck.magnolia.semiauto._
+import scalacheck.magnolia.auto._
+import scalacheck.magnolia.semiauto._
 import minitest.SimpleTestSuite
 import org.scalacheck.Arbitrary._
 import org.scalacheck.Gen

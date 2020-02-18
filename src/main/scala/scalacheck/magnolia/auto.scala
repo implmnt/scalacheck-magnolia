@@ -1,4 +1,4 @@
-package im.plmnt.scalacheck.magnolia
+package scalacheck.magnolia
 
 import magnolia._
 import org.scalacheck.Arbitrary

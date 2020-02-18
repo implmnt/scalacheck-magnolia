@@ -20,7 +20,7 @@ case object Baz extends Foo
 
 For automatically derivation, import the content of `im.plmnt.scalacheck.magnolia.auto`
 ```scala
-import im.plmnt.scalacheck.magnolia.auto._
+import scalacheck.magnolia.auto._
 
 forAll { foo: Foo =>
 // Ensure foo has the required property
@@ -33,7 +33,7 @@ forAll { bar: Bar =>
 
 For semi-automatically derivation use `im.plmnt.scalacheck.magnolia.semiauto`
 ```scala
-import im.plmnt.scalacheck.magnolia.semiauto._
+import magnolia.semiauto._
 
 implicit val arbitraryForFoo: Arbitrary[Foo] = deriveMagnoliaArbitrary[Foo]
 
