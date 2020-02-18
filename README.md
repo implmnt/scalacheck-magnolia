@@ -33,7 +33,7 @@ forAll { bar: Bar =>
 
 For semi-automatically derivation use `im.plmnt.scalacheck.magnolia.semiauto`
 ```scala
-import magnolia.semiauto._
+import scalacheck.magnolia.semiauto._
 
 implicit val arbitraryForFoo: Arbitrary[Foo] = deriveMagnoliaArbitrary[Foo]
 
