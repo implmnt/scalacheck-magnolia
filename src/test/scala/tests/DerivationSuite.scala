@@ -14,7 +14,7 @@ object DerivationSuite extends SimpleTestSuite {
   case object ConstLeaf                          extends Tree
 
   def arbitraryTree: Gen[Tree] =
-    Gen.lzy(Gen.oneOf(arbitraryLeaf, arbitraryNode, arbitraryConstLeaf))
+    Gen.lzy(Gen.oneOf(arbitraryConstLeaf, arbitraryLeaf, arbitraryNode))
 
   def arbitraryLeaf: Gen[Leaf] =
     for {
