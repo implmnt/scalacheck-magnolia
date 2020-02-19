@@ -1,21 +1,22 @@
 language: scala
-
+before_script:
+- gpg --import key.gpg
 script:
-  - sbt clean compile test
-
+- sbt clean compile test
 before_cache:
-  - find $HOME/.ivy2 -name "ivydata-*.properties" -print -delete
-  - find $HOME/.sbt  -name "*.lock"               -print -delete
-
+- find $HOME/.ivy2 -name "ivydata-*.properties" -print -delete
+- find $HOME/.sbt  -name "*.lock"               -print -delete
 cache:
   directories:
-    - $HOME/.cache/coursier
-    - $HOME/.ivy2/cache
-    - $HOME/.sbt
-
+  - "$HOME/.cache/coursier"
+  - "$HOME/.ivy2/cache"
+  - "$HOME/.sbt"
 deploy:
   provider: script
   cleanup: true
-  script: sbt +publish
+  script: sbt + publishSigned sonatypeRelease
   on:
     tags: true
+before_install:
+- openssl aes-256-cbc -K $encrypted_37d7bee1060c_key -iv $encrypted_37d7bee1060c_iv
+  -in key.gpg.enc -out key.gpg -d
