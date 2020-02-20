@@ -14,7 +14,7 @@ cache:
 deploy:
   provider: script
   cleanup: true
-  script: sbt + publishSigned sonatypeRelease
+  script: bash scripts/deploy.sh
   on:
     tags: true
 before_install:
