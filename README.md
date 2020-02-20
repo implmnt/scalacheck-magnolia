@@ -8,7 +8,7 @@ Derivation of [scalacheck](https://github.com/rickynils/scalacheck) Arbitrary on
 
 Add to your `build.sbt`
 ```scala
-libraryDependencies += "im.plmnt" %% "scalacheck-magnolia" % "0.2.0"
+libraryDependencies += "im.plmnt" %% "scalacheck-magnolia" % "1.0.0" % Test
 ```
 
 Can be used for case classes and/or sealed traits
@@ -18,7 +18,7 @@ case class Bar(str: String, bool: Boolean) extends Foo
 case object Baz extends Foo
 ```
 
-For automatically derivation, import the content of `im.plmnt.scalacheck.magnolia.auto`
+For automatically derivation, import the content of `scalacheck.magnolia.auto`
 ```scala
 import scalacheck.magnolia.auto._
 
@@ -31,7 +31,7 @@ forAll { bar: Bar =>
 }
 ```
 
-For semi-automatically derivation use `im.plmnt.scalacheck.magnolia.semiauto`
+For semi-automatically derivation use `scalacheck.magnolia.semiauto`
 ```scala
 import scalacheck.magnolia.semiauto._
 
