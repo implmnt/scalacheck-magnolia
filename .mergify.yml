@@ -1,10 +1,10 @@
 pull_request_rules:
-  - name: automatic merge for scala-steward pull requests affecting build.sbt
+  - name: automatic merge for scala-steward pull requests affecting dependencies.sbt
     conditions:
       - author=scala-steward
       - status-success=continuous-integration/travis-ci/pr
       - "#files=1"
-      - files=build.sbt
+      - files=dependencies.sbt
     actions:
       merge:
         method: merge
