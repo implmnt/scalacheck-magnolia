@@ -1,6 +1,6 @@
 language: scala
 before_script:
-- if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then gpg --import key.gpg; fi
+- if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then gpg --import key.gpg; fi
 script:
 - sbt clean compile test
 before_cache:
