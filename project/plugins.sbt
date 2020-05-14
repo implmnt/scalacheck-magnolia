@@ -1,4 +1,4 @@
-addSbtPlugin("org.scalameta"             % "sbt-scalafmt"    % "2.3.4")
+addSbtPlugin("org.scalameta"             % "sbt-scalafmt"    % "2.4.0")
 addSbtPlugin("io.github.davidgregory084" % "sbt-tpolecat"    % "0.1.11")
 addSbtPlugin("org.wartremover"           % "sbt-wartremover" % "2.4.8")
 addSbtPlugin("org.xerial.sbt"            % "sbt-sonatype"    % "3.9.2")
