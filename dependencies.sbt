@@ -1,5 +1,5 @@
 libraryDependencies ++= List(
-  "org.scalacheck"    %% "scalacheck"      % "1.15.2",
+  "org.scalacheck"    %% "scalacheck"      % "1.15.3",
   "io.chrisdavenport" %% "cats-scalacheck" % "0.3.0",
   "com.propensive"    %% "magnolia"        % "0.17.0",
   "im.plmnt"          %% "mercator-cats"   % "1.2.0",
