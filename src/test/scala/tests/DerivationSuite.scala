@@ -10,8 +10,8 @@ object DerivationSuite extends SimpleTestSuite {
 
   sealed trait Tree
   case class Leaf(s: String, i: Int, b: Boolean) extends Tree
-  case class Node(c: Tree, l: Long)              extends Tree
-  case object ConstLeaf                          extends Tree
+  case class Node(c: Tree, l: Long) extends Tree
+  case object ConstLeaf extends Tree
 
   def arbitraryTree: Gen[Tree] =
     Gen.lzy(Gen.oneOf(arbitraryConstLeaf, arbitraryLeaf, arbitraryNode))
