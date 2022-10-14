@@ -1,5 +1,5 @@
 lazy val scala212 = "2.12.12"
-lazy val scala213 = "2.13.4"
+lazy val scala213 = "2.13.10"
 
 scalaVersion := scala213
 organization := "im.plmnt"
